@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.allprofiles-container h1 {
+    text-align: center;
+    font-size: 67px;
+    margin-bottom: 4rem;
+    font-weight: 500;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.button-container button {
+    background-color: transparent;
+    border: 2px solid #a55000;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #a55000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.button-container button:hover {
+    border: 2px solid #e06f02;
+    color: #e06f02;
+}
+
+.profiles-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 150px;  
+}
+
+.profiles-container input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%; 
+    margin-top: 20px;
+}
+
+
+.profile img {
+    width: 200px;
+    height: auto; 
+    border-radius: 5px;
+    border: 3px solid transparent; 
+    transition: border-color 0.3s ease; 
+}
+
+.img-input-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.img-input-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid transparent; 
+    transition: border-color 0.3s ease; 
+}
+  
+.img-input-container:hover img {
+    border-color: #fff; 
+}
+  
+.img-input-container input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 20px; 
+    transition: color 0.3s ease; 
+}
+  
+.img-input-container:hover input {
+    color: #fff; 
+}
+
+
+.profile h3 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.profile button {
+    border-radius: 10px;
+    border: none;
+    width: 5rem;
+    height: 1.4rem;
+    margin-bottom: 20px;
+    color: #e06f02;
+    background-color: #353535;
+    font-weight: 600;
+}
+
+
+.add-profile ion-icon {
+    font-size: 10rem;
+    color: rgb(0, 0, 0, 0.2);
+}
+

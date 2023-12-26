@@ -1,0 +1,89 @@
+.navbar {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.navbar img {
+  width: 6%;
+}
+
+.navbar h1 {
+  margin: 0; 
+  margin-left: 1rem; 
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-center li {
+  text-decoration: none;
+  list-style: none;
+  color: #fff; 
+  cursor: pointer;
+}
+
+.navbar-center li:hover {
+  color: #b6b6b6;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  top: 52%;
+  right: -50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.navbar-right input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  border: none;
+  border-radius: 5px;
+  margin-left: 1rem;
+  background-color: transparent;
+  color: #fff;
+  margin-right: 2rem;
+}
+
+.search ion-icon {
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.profile-icon {
+  max-width: 2rem;
+}
+
+.profile-icon img {
+  width: 160%;
+  border-radius: 50%;
+}
