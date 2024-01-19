@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';  
 import './Navbar.css';
+import AOS from 'aos'
+import  'aos/dist/aos.css'
 
 const Navbar = () => {
+
+  useEffect(()=> {
+    AOS.init({duration: 1000})
+  } , [])
+
   return (
     <nav className="navbar">
       <Link to="#">
-        <div className="navbar-left">
+        <div className="navbar-left" data-aos="fade-right">
           <img src="/public/image/image.webp" alt="" />
           <h1>Quantum</h1>
         </div>

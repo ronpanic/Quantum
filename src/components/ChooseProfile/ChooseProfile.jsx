@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';  
 import "./ChooseProfile.css";
+import AOS from 'aos'
+import  'aos/dist/aos.css'
 
 const ChooseProfile = () => {
   const [profiles, setProfiles] = useState(() => {
     const storedProfiles = localStorage.getItem('profiles');
     return storedProfiles ? JSON.parse(storedProfiles) : [
-      { id: 1, name: 'Nicolas', imgSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4gICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDA7IiAvPiAgPC9zdmc+Cg==", type: 'Standard' },
+      { id: 1, name: 'Profile', imgSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4gICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDA7IiAvPiAgPC9zdmc+Cg==", type: 'Standard' },
     ];
   });
 
@@ -63,25 +65,38 @@ const ChooseProfile = () => {
     }
   };
 
+  useEffect(()=> {
+    AOS.init({duration: 800})
+  } , [])
+
   return (
     <div className='allprofiles-container'>
-      <h1>Who has free time now?</h1>
+     
+
+      <h1 data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">Who has free time now?</h1>
       <div className='profiles-container'>
         {profiles.map((profile) => (
-          <div key={profile.id} className='profile'>
+          <div key={profile.id} className='profile' data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="600"
+          data-aos-offset="0">
             {isDeleteMode && (
               <div className='delete-overlay' onClick={() => handleDelete(profile.id)}>
                 <ion-icon name="ban-outline"></ion-icon>
               </div>
             )}
-            <button>{profile.type}</button>
-            <Link to={`/${profile.name}`}>
+            <button className='profile-type'>{profile.type}</button>
               <div className='img-input-container'>
-                <img
-                  src={profile.imgSrc}
-                  alt="profileimg"
-                  onClick={() => isDeleteMode && document.getElementById(`fileInput${profile.id}`).click()}
-                />
+                <Link to={`/${profile.name}`}>
+                  <img
+                    src={profile.imgSrc}
+                    alt="profileimg"
+                    onClick={() => isDeleteMode && document.getElementById(`fileInput${profile.id}`).click()}
+                  />
+                </Link>
                 <input
                   type="file"
                   id={`fileInput${profile.id}`}
@@ -98,7 +113,6 @@ const ChooseProfile = () => {
                   maxLength={8}
                 />
               </div>
-            </Link>
           </div>
         ))}
         {profiles.length < 4 && (
@@ -109,7 +123,10 @@ const ChooseProfile = () => {
       </div>
 
       <div className='button-container'>
-        <button onClick={() => setIsDeleteMode(!isDeleteMode)}>
+        <button data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" onClick={() => setIsDeleteMode(!isDeleteMode)}>
           {isDeleteMode ? "Done" : "Manage Profiles"}
         </button>
       </div>

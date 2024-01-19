@@ -14,6 +14,10 @@ body {
     font-weight: 500;
 }
 
+.allprofiles-container h2 {
+    display: none;
+}
+
 .button-container {
     text-align: center;
     margin-top: 6rem;
@@ -40,7 +44,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 .profile {
     cursor: pointer;
@@ -122,3 +125,78 @@ body {
     color: rgb(0, 0, 0, 0.2);
 }
 
+
+
+@media (max-width: 985px) {
+
+
+    .allprofiles-container {
+        overflow: hidden;
+    }
+   
+    .profiles-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .profile {
+        margin-bottom: 20px;
+        width: calc(33.33% - 20px); 
+    }
+
+    .profiles-container .add-profile {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .button-container button {
+        margin-bottom: 10rem;
+        margin-top: -10rem;
+    }
+
+    .profile img {
+        width: 150px;
+    }
+
+    .allprofiles-container h1 {
+        font-size: 20px;
+        margin-top: 12rem;
+        margin-bottom: 40px ;
+    }
+
+   /* 
+   .logo-container {
+        position: absolute;
+        text-align: center;
+        transform: translateY(50%);
+        top: 10%;
+        left: 45%; 
+        display: flex; 
+        align-items: center;
+    }
+   
+
+    .logo-container img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+
+    
+    .allprofiles-container .logo-container h2 {
+        text-align: center;
+        font-size: 20px;
+        display: block;
+        margin: 0; /
+    }
+    
+    */
+
+    .profile-type {
+        display: none;
+    }
+
+    .button-container {
+        margin-top: 2rem;
+    }
+}

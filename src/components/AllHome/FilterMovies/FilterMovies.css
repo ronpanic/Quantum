@@ -1,0 +1,244 @@
+.filter-container {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    top: 140%;
+    left: 1.5%;
+    transform: translateY(50%);
+    width: 96.5%;
+}
+
+.filter-container button {
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 2px solid #a6a6a6;
+    background-color: transparent;
+}
+
+.filter-container button:hover {
+    border: 2px solid #fff;
+}
+
+.filter-container button ion-icon {
+    margin-right: 5px;
+}
+
+.filter-container button:last-child {
+    margin-left: auto;
+    background-color: #e06f02;
+    border: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.filter-container button:last-child:hover {
+    background-color: #a55103;
+}
+
+
+ 
+
+
+.movies-container {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    transform: translateY(50%);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.movies2 {
+    position: relative;
+    max-width: 280px;
+    max-height: 360px;
+    overflow: hidden; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movies2:hover {
+    transform: scale(1.1) translateY(-20px);
+}
+
+.movies2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    user-select: none;
+    filter: blur(5px); 
+    transition: filter 0.5s ease;
+}
+
+
+.movies2 img.loaded {
+    filter: none; 
+}
+
+.movies2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.movies2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.movies2:hover::after,
+.movies2:hover::before {
+    background-color: rgb(24, 24, 24,0.7);
+}
+
+.movie-icon {
+    z-index: 999;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    transform: translateY(50%);
+    display: flex;
+    gap: 10rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movies2:hover .movie-icon {
+    opacity: 1; 
+}
+
+.movies2 ion-icon {
+    color: #e06f02;
+    font-size: 30px;
+}
+
+
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 30px 10px; 
+    box-sizing: border-box; 
+    z-index: 999;
+    user-select: none;
+}
+
+.p1, .p2, h3, .summary-container{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: left;
+    margin: 0   ;
+}
+
+.movies2:hover .p1,
+.movies2:hover .p2,
+.movies2:hover h3,
+.movies2:hover .summary-container {
+    opacity: 1;
+}
+
+.movie-info h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+
+.second-info {
+    display: flex;
+}
+
+.movie-info p {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+
+
+.summary-container h4 {
+    font-weight: 500;
+}
+
+.summary-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -1rem;
+}
+
+.summary-flex ion-icon {
+    color: #e06f02;
+    margin-right: 5px; 
+    font-size: 20px;
+}
+
+.summary-flex p {
+    display: flex;
+    align-items: center;
+    color: #e06f02;
+}
+
+.moremovies-container {
+    position: absolute;
+    top: 315%;
+    left: 1.5%;
+    transform: translateY(50%);
+}
+
+.more-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.more-flex button {
+    padding: 5px;
+    width: 6rem;
+    background-color: #e06f02;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.more-flex button ion-icon {
+    font-size: 1.5rem;
+}
