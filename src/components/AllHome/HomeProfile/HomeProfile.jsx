@@ -4,6 +4,7 @@ import Navbar from '../../Navbar/Navbar';
 import LastMovies from '../LastMovies/LastMovies';
 import FilterMovies from '../FilterMovies/FilterMovies';
 import QuantumBenefits from '../QuantumBenefits/QuantumBenefits'; 
+import spiderman2 from '../../../assets/spiderman2.jpg'       
 import AOS from 'aos'
 import  'aos/dist/aos.css'
 
@@ -33,8 +34,8 @@ const HomeProfile = () => {
             <button> <ion-icon name="add-circle"></ion-icon> Add list</button>
           </div>
         </div>
-        <img src="/public/image/spiderman2.jpg" alt="presentation" />
-      </div>
+        <img src={spiderman2} alt="presentation" />
+      </div>      
       <LastMovies/>
       <FilterMovies/>
       <QuantumBenefits/>
