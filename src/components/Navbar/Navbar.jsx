@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';  
 import './Navbar.css';
+import pandaicon from '../../assets/pandaicon.jpeg'  
+import image from '../../assets/image.webp'  
 import AOS from 'aos'
 import  'aos/dist/aos.css'
 
@@ -14,7 +16,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="#">
         <div className="navbar-left" data-aos="fade-right">
-          <img src="/public/image/image.webp" alt="" />
+          <img src={image}alt="logoicon" />
           <h1>Quantum</h1>
         </div>
       </Link>
@@ -32,7 +34,7 @@ const Navbar = () => {
           <ion-icon name="search-outline"></ion-icon>
         </div>
         <div className='profile-icon'>
-            <img src="/public/image/panda-icon.jpeg" alt="" />
+            <img src={pandaicon} alt="" />
         </div>
       </div>
     </nav>

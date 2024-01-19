@@ -136,7 +136,7 @@
 .vertical-line {
     width: 2px;
     height: 100%    ;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255,0.1);
 }
 
 .public-video {

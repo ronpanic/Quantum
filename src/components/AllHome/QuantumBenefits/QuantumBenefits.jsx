@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./QuantumBenefits.css"
+import sv from '../../../assets/sv.png' 
 
 const QuantumBenefits = () => {
   
@@ -47,7 +48,7 @@ const QuantumBenefits = () => {
         <div className='vertical-line'></div>
 
         <div className='servers'>
-          <img src="/public/image/sv.png" alt="" />
+          <img src={sv} alt="" />
           <p>Scale your traffic, content, and site performance to match your business — without worrying about reliability.</p>
         </div>
       </div>
