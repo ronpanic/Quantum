@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+
+.alllogin {
+    width: 100vw;
+    height: 110vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .bg-superman {
+    position: absolute;
+    top: 0;
+    right: 10rem;
+  }
+  
+  .bg-forest img {
+    width: 100%;
+    opacity: 0.2;
+  }
+  
+  .authenticated {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .authenticated img {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .authenticated h1,
+  .authenticated h2 {
+    font-size: 2.5rem;
+  }
+  
+  .login-container button {
+    background-color: #e06f02;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 1rem;
+    width: 8rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  
+  .login-container button:hover {
+    background-color: #a55103;
+  }
+  
+  .authenticated-container {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+  }
+  
+  .authenticated-container h3 {
+    color: #fff;
+    font-size: 5rem;
+    opacity: 1;
+    margin-top: 5rem;
+    text-shadow: -2px 2px 20px rgba(206, 100, 37, 0.5);
+    font-family: 'Kanit', sans-serif;
+    max-width: 50rem;
+  }
+  
+  .authenticated-container.hidden {
+    display: none;
+  }
+  
+  .logo-login {
+    display: flex;
+    align-items: center;
+    margin-top: -15rem;
+  }
+  
+  .logo-login img {
+    width: 5%;
+    margin-right: 1rem;
+  }

@@ -3,11 +3,12 @@ import { Link, BrowserRouter, Route, Routes } from 'react-router-dom'
 import ChooseProfile from './components/ChooseProfile/ChooseProfile'
 import HomeProfile from './components/AllHome/HomeProfile/HomeProfile'
 import MovieDetail from './components/AllHome/MovieDetail/MovieDetail'
+import LoginProfile from './components/LoginProfile/LoginProfile'
 
 const Home = () => {
   return (
     <>
-      <ChooseProfile />
+      <LoginProfile />
     </>
   )
 }
@@ -38,7 +39,7 @@ function App() {
             path="/movie/:id"
             element={<MovieDetail getMovieById={getMovieById} />} 
           />
-          
+          <Route path="/ChooseProfile" element={<ChooseProfile />} />
         </Routes>
       </BrowserRouter>
     </div>

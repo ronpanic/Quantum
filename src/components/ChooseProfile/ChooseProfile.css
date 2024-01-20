@@ -79,7 +79,7 @@ body {
 .img-input-container img {
     width: 200px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 3px solid transparent; 
     transition: border-color 0.3s ease; 
 }

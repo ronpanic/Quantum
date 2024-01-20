@@ -8,7 +8,7 @@ const ChooseProfile = () => {
   const [profiles, setProfiles] = useState(() => {
     const storedProfiles = localStorage.getItem('profiles');
     return storedProfiles ? JSON.parse(storedProfiles) : [
-      { id: 1, name: 'Profile', imgSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4gICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDA7IiAvPiAgPC9zdmc+Cg==", type: 'Standard' },
+      { id: 1, name: 'Profile', imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png", type: 'Standard' },
     ];
   });
 
@@ -23,7 +23,7 @@ const ChooseProfile = () => {
       const newProfile = {
         id: profiles.length + 1,
         name: `Profile ${profiles.length + 1}`,
-        imgSrc: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4gICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDA7IiAvPiAgPC9zdmc+Cg==",
+        imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
         type: 'Standard',
       };
       setProfiles([...profiles, newProfile]);
