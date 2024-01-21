@@ -78,7 +78,7 @@ const LoginProfile = () => {
                         </div>
                     ) : (
                         <div>   
-                            <button onClick={() => loginWithRedirect({ redirectUri: window.location.origin })}>REGISTER</button>
+                            <button onClick={() => loginWithRedirect({ redirectUri: window.location.origin })}>CONTINUE</button>
                         </div>
                     )}
                 </div>
